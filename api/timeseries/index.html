@@ -1,0 +1,1385 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://pyjanitor-devs.github.io/pyjanitor/api/timeseries/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>Timeseries - pyjanitor documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../css/nb_mods.css">
+    
+      <link rel="stylesheet" href="../../css/apidocs.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/nord.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="blue-grey">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#timeseries" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="pyjanitor documentation" class="md-header__button md-logo" aria-label="pyjanitor documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M448 336V48c0-26.51-21.5-48-48-48H96C42.98 0 0 42.98 0 96v320c0 53.02 42.98 96 96 96h320c17.67 0 32-14.33 32-31.1 0-11.72-6.607-21.52-16-27.1v-81.36c9.8-9.64 16-22.24 16-36.44zM143.1 128h192c9.7 0 16.9 7.2 16.9 16s-7.2 16-16 16H143.1c-7.9 0-15.1-7.2-15.1-16s7.2-16 15.1-16zm0 64h192c9.7 0 16.9 7.2 16.9 16s-7.2 16-16 16H143.1c-7.9 0-15.1-7.2-15.1-16s7.2-16 15.1-16zM384 448H96c-17.67 0-32-14.33-32-32s14.33-32 32-32h288v64z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            pyjanitor documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Timeseries
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pyjanitor-devs/pyjanitor/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pyjanitor-devs/pyjanitor
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="pyjanitor documentation" class="md-nav__button md-logo" aria-label="pyjanitor documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M448 336V48c0-26.51-21.5-48-48-48H96C42.98 0 0 42.98 0 96v320c0 53.02 42.98 96 96 96h320c17.67 0 32-14.33 32-31.1 0-11.72-6.607-21.52-16-27.1v-81.36c9.8-9.64 16-22.24 16-36.44zM143.1 128h192c9.7 0 16.9 7.2 16.9 16s-7.2 16-16 16H143.1c-7.9 0-15.1-7.2-15.1-16s7.2-16 15.1-16zm0 64h192c9.7 0 16.9 7.2 16.9 16s-7.2 16-16 16H143.1c-7.9 0-15.1-7.2-15.1-16s7.2-16 15.1-16zM384 448H96c-17.67 0-32-14.33-32-32s14.33-32 32-32h288v64z"/></svg>
+
+    </a>
+    pyjanitor documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pyjanitor-devs/pyjanitor/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pyjanitor-devs/pyjanitor
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devguide/" class="md-nav__link">
+        Development Guide
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          API Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          API Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions/" class="md-nav__link">
+        Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../biology/" class="md-nav__link">
+        Biology
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chemistry/" class="md-nav__link">
+        Chemistry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engineering/" class="md-nav__link">
+        Engineering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../finance/" class="md-nav__link">
+        Finance
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io/" class="md-nav__link">
+        Input/Output (io)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ml/" class="md-nav__link">
+        Machine Learning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math/" class="md-nav__link">
+        Math
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Timeseries
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Timeseries
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.timeseries" class="md-nav__link">
+    janitor.timeseries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.timeseries.fill_missing_timestamps" class="md-nav__link">
+    fill_missing_timestamps()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.timeseries.flag_jumps" class="md-nav__link">
+    flag_jumps()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.timeseries.sort_timestamps_monotonically" class="md-nav__link">
+    sort_timestamps_monotonically()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utils/" class="md-nav__link">
+        Utils
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xarray/" class="md-nav__link">
+        XArray
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CHANGELOG/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AUTHORS/" class="md-nav__link">
+        Authors
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.timeseries" class="md-nav__link">
+    janitor.timeseries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.timeseries.fill_missing_timestamps" class="md-nav__link">
+    fill_missing_timestamps()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.timeseries.flag_jumps" class="md-nav__link">
+    flag_jumps()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.timeseries.sort_timestamps_monotonically" class="md-nav__link">
+    sort_timestamps_monotonically()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/pyjanitor-devs/pyjanitor/edit/master/docs/api/timeseries.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+
+<h1 id="timeseries">Timeseries</h1>
+
+
+  <div class="doc doc-object doc-module">
+
+<a id="janitor.timeseries"></a>
+    <div class="doc doc-contents first">
+
+      <p>Time series-specific data cleaning functions. </p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="janitor.timeseries.fill_missing_timestamps" class="doc doc-heading">
+<code class="highlight language-python">fill_missing_timestamps(df, frequency, first_time_stamp=None, last_time_stamp=None)</code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Fills a DataFrame with missing timestamps based on a defined frequency.</p>
+<p>If timestamps are missing, this function will re-index the DataFrame.
+If timestamps are not missing, then the function will return the DataFrame
+unmodified.</p>
+<p>Functional usage example:</p>
+<pre><code class="language-python">import pandas as pd
+import janitor.timeseries
+
+df = pd.DataFrame(...)
+
+df = janitor.timeseries.fill_missing_timestamps(
+    df=df,
+    frequency=&quot;1H&quot;,
+)
+</code></pre>
+<p>Method chaining example:</p>
+<pre><code class="language-python">import pandas as pd
+import janitor.timeseries
+
+df = (
+    pd.DataFrame(...)
+    .fill_missing_timestamps(frequency=&quot;1H&quot;)
+)
+</code></pre>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>df</code></td>
+        <td><code>DataFrame</code></td>
+        <td><p>DataFrame which needs to be tested for missing timestamps</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>frequency</code></td>
+        <td><code>str</code></td>
+        <td><p>sampling frequency of the data. Acceptable frequency strings are available <a href="https://pandas.pydata.org/docs/user_guide/timeseries.html#timeseries-offset-aliases">here</a>. Check offset aliases under time series in user guide</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>first_time_stamp</code></td>
+        <td><code>Timestamp</code></td>
+        <td><p>timestamp expected to start from; defaults to <code>None</code>. If no input is provided, assumes the minimum value in <code>time_series</code>.</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>last_time_stamp</code></td>
+        <td><code>Timestamp</code></td>
+        <td><p>timestamp expected to end with; defaults to <code>None</code>. If no input is provided, assumes the maximum value in <code>time_series</code>.</p></td>
+        <td><code>None</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>DataFrame</code></td>
+      <td><p>DataFrame that has a complete set of contiguous datetimes.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>janitor/timeseries.py</code></summary>
+          <pre class="highlight"><code class="language-python">@pf.register_dataframe_method
+def fill_missing_timestamps(
+    df: pd.DataFrame,
+    frequency: str,
+    first_time_stamp: pd.Timestamp = None,
+    last_time_stamp: pd.Timestamp = None,
+) -&gt; pd.DataFrame:
+    """
+    Fills a DataFrame with missing timestamps based on a defined frequency.
+
+    If timestamps are missing, this function will re-index the DataFrame.
+    If timestamps are not missing, then the function will return the DataFrame
+    unmodified.
+
+    Functional usage example:
+
+    ```python
+    import pandas as pd
+    import janitor.timeseries
+
+    df = pd.DataFrame(...)
+
+    df = janitor.timeseries.fill_missing_timestamps(
+        df=df,
+        frequency="1H",
+    )
+    ```
+
+    Method chaining example:
+
+    ```python
+    import pandas as pd
+    import janitor.timeseries
+
+    df = (
+        pd.DataFrame(...)
+        .fill_missing_timestamps(frequency="1H")
+    )
+    ```
+
+    :param df: DataFrame which needs to be tested for missing timestamps
+    :param frequency: sampling frequency of the data.
+        Acceptable frequency strings are available
+        [here](https://pandas.pydata.org/docs/user_guide/timeseries.html#timeseries-offset-aliases).
+        Check offset aliases under time series in user guide
+    :param first_time_stamp: timestamp expected to start from;
+        defaults to `None`. If no input is provided, assumes the
+        minimum value in `time_series`.
+    :param last_time_stamp: timestamp expected to end with; defaults to `None`.
+        If no input is provided, assumes the maximum value in `time_series`.
+    :returns: DataFrame that has a complete set of contiguous datetimes.
+    """
+    # Check all the inputs are the correct data type
+    check("frequency", frequency, [str])
+    check("first_time_stamp", first_time_stamp, [pd.Timestamp, type(None)])
+    check("last_time_stamp", last_time_stamp, [pd.Timestamp, type(None)])
+
+    if first_time_stamp is None:
+        first_time_stamp = df.index.min()
+    if last_time_stamp is None:
+        last_time_stamp = df.index.max()
+
+    # Generate expected timestamps
+    expected_timestamps = pd.date_range(
+        start=first_time_stamp, end=last_time_stamp, freq=frequency
+    )
+
+    return df.reindex(expected_timestamps)
+</code></pre>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="janitor.timeseries.flag_jumps" class="doc doc-heading">
+<code class="highlight language-python">flag_jumps(df, scale='percentage', direction='any', threshold=0.0, strict=False)</code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Create boolean column(s) that flag whether or not the change
+between consecutive rows exceeds a provided threshold.</p>
+<p>Functional usage example:</p>
+<pre><code class="language-python">import pandas as pd
+import janitor.timeseries
+
+df = pd.DataFrame(...)
+
+df = flag_jumps(
+    df=df,
+    scale=&quot;absolute&quot;,
+    direction=&quot;any&quot;,
+    threshold=2,
+)
+</code></pre>
+<p>Method chaining example:</p>
+<pre><code class="language-python">import pandas as pd
+import janitor.timeseries
+
+df = (
+    pd.DatFrame(...)
+    .flag_jumps(
+        scale=&quot;absolute&quot;,
+        direction=&quot;any&quot;,
+        threshold=2,
+    )
+)
+</code></pre>
+<p>Detailed chaining examples:</p>
+<pre><code class="language-python"># Applies specified criteria across all columns of the DataFrame
+# Appends a flag column for each column in the DataFrame
+df = (
+    pd.DataFrame(...)
+    .flag_jumps(
+        scale=&quot;absolute&quot;,
+        direction=&quot;any&quot;,
+        threshold=2
+    )
+)
+
+# Applies specific criteria to certain DataFrame columns
+# Applies default criteria to columns not specifically listed
+# Appends a flag column for each column in the DataFrame
+df = (
+    pd.DataFrame(...)
+    .flag_jumps(
+        scale=dict(col1=&quot;absolute&quot;, col2=&quot;percentage&quot;),
+        direction=dict(col1=&quot;increasing&quot;, col2=&quot;any&quot;),
+        threshold=dict(col1=1, col2=0.5),
+    )
+)
+
+# Applies specific criteria to certain DataFrame columns
+# Applies default criteria to columns not specifically listed
+# Appends a flag column for each column in the DataFrame
+df = (
+    pd.DataFrame(...)
+    .flag_jumps(
+        scale=dict(col1=&quot;absolute&quot;),
+        direction=dict(col2=&quot;increasing&quot;),
+    )
+)
+
+# Applies specific criteria to certain DataFrame columns
+# Applies default criteria to columns not specifically listed
+# Appends a flag column for only those columns found in
+#   specified criteria
+df = (
+    pd.DataFrame(...)
+    .flag_jumps(
+        scale=dict(col1=&quot;absolute&quot;),
+        threshold=dict(col2=1),
+        strict=True,
+    )
+)
+</code></pre>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>df</code></td>
+        <td><code>DataFrame</code></td>
+        <td><p>DataFrame which needs to be flagged for changes between consecutive rows above a certain threshold.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>scale</code></td>
+        <td><code>Union[str, Dict[str, str]]</code></td>
+        <td><p>Type of scaling approach to use. Acceptable arguments are <code>'absolute'</code> (consider the difference between rows) and <code>'percentage'</code> (consider the percentage change between rows); defaults to <code>'percentage'</code>.</p></td>
+        <td><code>&#39;percentage&#39;</code></td>
+      </tr>
+      <tr>
+        <td><code>direction</code></td>
+        <td><code>Union[str, Dict[str, str]]</code></td>
+        <td><p>Type of method used to handle the sign change when comparing consecutive rows. Acceptable arguments are <code>'increasing'</code> (only consider rows that are increasing in value), <code>'decreasing'</code> (only consider rows that are decreasing in value), and <code>'any'</code> (consider rows that are either increasing or decreasing; sign is ignored); defaults to <code>'any'</code>.</p></td>
+        <td><code>&#39;any&#39;</code></td>
+      </tr>
+      <tr>
+        <td><code>threshold</code></td>
+        <td><code>Union[int, float, Dict[str, Union[int, float]]]</code></td>
+        <td><p>The value to check if consecutive row comparisons exceed. Always uses a greater than comparison. Must be <code>&gt;= 0.0</code>; defaults to <code>0.0</code>.</p></td>
+        <td><code>0.0</code></td>
+      </tr>
+      <tr>
+        <td><code>strict</code></td>
+        <td><code>bool</code></td>
+        <td><p>flag to enable/disable appending of a flag column for each column in the provided DataFrame. If set to <code>True</code>, will only append a flag column for those columns found in at least one of the input dictionaries. If set to <code>False</code>, will appen a flag column for each column found in the provided DataFrame. If criteria is not specified, the defaults for each criteria is used; defaults to <code>False</code>.</p></td>
+        <td><code>False</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>DataFrame</code></td>
+      <td><p>DataFrame that has <code>flag jump</code> columns.</p></td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>JanitorError</code></td>
+        <td><p>if <code>strict=True</code> and at least one of <code>scale</code>, <code>direction</code>, or <code>threshold</code> inputs is not a dictionary.</p></td>
+      </tr>
+      <tr>
+        <td><code>JanitorError</code></td>
+        <td><p>if <code>scale</code> is not one of <code>("absolute", "percentage")</code>.</p></td>
+      </tr>
+      <tr>
+        <td><code>JanitorError</code></td>
+        <td><p>if <code>direction</code> is not one of <code>("increasing", "decreasing", "any")</code>.</p></td>
+      </tr>
+      <tr>
+        <td><code>JanitorError</code></td>
+        <td><p>if <code>threshold</code> is less than <code>0.0</code>.</p></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>janitor/timeseries.py</code></summary>
+          <pre class="highlight"><code class="language-python">@pf.register_dataframe_method
+def flag_jumps(
+    df: pd.DataFrame,
+    scale: Union[str, Dict[str, str]] = "percentage",
+    direction: Union[str, Dict[str, str]] = "any",
+    threshold: Union[int, float, Dict[str, Union[int, float]]] = 0.0,
+    strict: bool = False,
+) -&gt; pd.DataFrame:
+    """
+    Create boolean column(s) that flag whether or not the change
+    between consecutive rows exceeds a provided threshold.
+
+    Functional usage example:
+
+    ```python
+    import pandas as pd
+    import janitor.timeseries
+
+    df = pd.DataFrame(...)
+
+    df = flag_jumps(
+        df=df,
+        scale="absolute",
+        direction="any",
+        threshold=2,
+    )
+    ```
+
+    Method chaining example:
+
+    ```python
+    import pandas as pd
+    import janitor.timeseries
+
+    df = (
+        pd.DatFrame(...)
+        .flag_jumps(
+            scale="absolute",
+            direction="any",
+            threshold=2,
+        )
+    )
+    ```
+
+    Detailed chaining examples:
+
+    ```python
+    # Applies specified criteria across all columns of the DataFrame
+    # Appends a flag column for each column in the DataFrame
+    df = (
+        pd.DataFrame(...)
+        .flag_jumps(
+            scale="absolute",
+            direction="any",
+            threshold=2
+        )
+    )
+
+    # Applies specific criteria to certain DataFrame columns
+    # Applies default criteria to columns not specifically listed
+    # Appends a flag column for each column in the DataFrame
+    df = (
+        pd.DataFrame(...)
+        .flag_jumps(
+            scale=dict(col1="absolute", col2="percentage"),
+            direction=dict(col1="increasing", col2="any"),
+            threshold=dict(col1=1, col2=0.5),
+        )
+    )
+
+    # Applies specific criteria to certain DataFrame columns
+    # Applies default criteria to columns not specifically listed
+    # Appends a flag column for each column in the DataFrame
+    df = (
+        pd.DataFrame(...)
+        .flag_jumps(
+            scale=dict(col1="absolute"),
+            direction=dict(col2="increasing"),
+        )
+    )
+
+    # Applies specific criteria to certain DataFrame columns
+    # Applies default criteria to columns not specifically listed
+    # Appends a flag column for only those columns found in
+    #   specified criteria
+    df = (
+        pd.DataFrame(...)
+        .flag_jumps(
+            scale=dict(col1="absolute"),
+            threshold=dict(col2=1),
+            strict=True,
+        )
+    )
+    ```
+
+    :param df: DataFrame which needs to be flagged for changes between
+        consecutive rows above a certain threshold.
+    :param scale: Type of scaling approach to use.
+        Acceptable arguments are `'absolute'` (consider the difference
+        between rows) and `'percentage'` (consider the percentage
+        change between rows); defaults to `'percentage'`.
+    :param direction: Type of method used to handle the sign change when
+        comparing consecutive rows.
+        Acceptable arguments are `'increasing'` (only consider rows
+        that are increasing in value), `'decreasing'` (only consider
+        rows that are decreasing in value), and `'any'` (consider rows
+        that are either increasing or decreasing; sign is ignored);
+        defaults to `'any'`.
+    :param threshold: The value to check if consecutive row comparisons
+        exceed. Always uses a greater than comparison. Must be `&gt;= 0.0`;
+        defaults to `0.0`.
+    :param strict: flag to enable/disable appending of a flag column for
+        each column in the provided DataFrame. If set to `True`, will
+        only append a flag column for those columns found in at least
+        one of the input dictionaries. If set to `False`, will appen
+        a flag column for each column found in the provided DataFrame.
+        If criteria is not specified, the defaults for each criteria
+        is used; defaults to `False`.
+    :returns: DataFrame that has `flag jump` columns.
+    :raises JanitorError: if `strict=True` and at least one of
+        `scale`, `direction`, or `threshold` inputs is not a
+        dictionary.
+    :raises JanitorError: if `scale` is not one of
+        `("absolute", "percentage")`.
+    :raises JanitorError: if `direction` is not one of
+        `("increasing", "decreasing", "any")`.
+    :raises JanitorError: if `threshold` is less than `0.0`.
+    """
+    df = df.copy()
+
+    if strict:
+        if (
+            any(isinstance(arg, dict) for arg in (scale, direction, threshold))
+            is False
+        ):
+            raise JanitorError(
+                "When enacting 'strict=True', 'scale', 'direction', or "
+                + "'threshold' must be a dictionary."
+            )
+
+        # Only append a flag col for the cols that appear
+        # in at least one of the input dicts
+        arg_keys = [
+            arg.keys()
+            for arg in (scale, direction, threshold)
+            if isinstance(arg, dict)
+        ]
+        cols = set(itertools.chain.from_iterable(arg_keys))
+
+    else:
+        # Append a flag col for each col in the DataFrame
+        cols = df.columns
+
+    columns_to_add = {}
+    for col in sorted(cols):
+
+        # Allow arguments to be a mix of dict and single instances
+        s = scale.get(col, "percentage") if isinstance(scale, dict) else scale
+        d = (
+            direction.get(col, "any")
+            if isinstance(direction, dict)
+            else direction
+        )
+        t = (
+            threshold.get(col, 0.0)
+            if isinstance(threshold, dict)
+            else threshold
+        )
+
+        columns_to_add[f"{col}_jump_flag"] = _flag_jumps_single_col(
+            df, col, scale=s, direction=d, threshold=t
+        )
+
+    df = df.assign(**columns_to_add)
+
+    return df
+</code></pre>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="janitor.timeseries.sort_timestamps_monotonically" class="doc doc-heading">
+<code class="highlight language-python">sort_timestamps_monotonically(df, direction='increasing', strict=False)</code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Sort DataFrame such that index is monotonic.</p>
+<p>If timestamps are monotonic, this function will return
+the DataFrame unmodified. If timestamps are not monotonic,
+then the function will sort the DataFrame.</p>
+<p>Functional usage example:</p>
+<pre><code class="language-python">import pandas as pd
+import janitor.timeseries
+
+df = pd.DataFrame(...)
+
+df = janitor.timeseries.sort_timestamps_monotonically(
+    direction=&quot;increasing&quot;
+)
+</code></pre>
+<p>Method chaining example:</p>
+<pre><code class="language-python">import pandas as pd
+import janitor.timeseries
+
+df = (
+    pd.DataFrame(...)
+    .sort_timestamps_monotonically(direction=&quot;increasing&quot;)
+)
+</code></pre>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>df</code></td>
+        <td><code>DataFrame</code></td>
+        <td><p>DataFrame which needs to be tested for monotonicity.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>direction</code></td>
+        <td><code>str</code></td>
+        <td><p>type of monotonicity desired. Acceptable arguments are <code>'increasing'</code> or <code>'decreasing'</code>.</p></td>
+        <td><code>&#39;increasing&#39;</code></td>
+      </tr>
+      <tr>
+        <td><code>strict</code></td>
+        <td><code>bool</code></td>
+        <td><p>flag to enable/disable strict monotonicity. If set to <code>True</code>, will remove duplicates in the index by retaining first occurrence of value in index. If set to <code>False</code>, will not test for duplicates in the index; defaults to <code>False</code>.</p></td>
+        <td><code>False</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>DataFrame</code></td>
+      <td><p>DataFrame that has monotonically increasing (or decreasing) timestamps.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>janitor/timeseries.py</code></summary>
+          <pre class="highlight"><code class="language-python">@pf.register_dataframe_method
+def sort_timestamps_monotonically(
+    df: pd.DataFrame, direction: str = "increasing", strict: bool = False
+) -&gt; pd.DataFrame:
+    """
+    Sort DataFrame such that index is monotonic.
+
+    If timestamps are monotonic, this function will return
+    the DataFrame unmodified. If timestamps are not monotonic,
+    then the function will sort the DataFrame.
+
+    Functional usage example:
+
+    ```python
+    import pandas as pd
+    import janitor.timeseries
+
+    df = pd.DataFrame(...)
+
+    df = janitor.timeseries.sort_timestamps_monotonically(
+        direction="increasing"
+    )
+    ```
+
+    Method chaining example:
+
+    ```python
+    import pandas as pd
+    import janitor.timeseries
+
+    df = (
+        pd.DataFrame(...)
+        .sort_timestamps_monotonically(direction="increasing")
+    )
+    ```
+
+    :param df: DataFrame which needs to be tested for monotonicity.
+    :param direction: type of monotonicity desired.
+        Acceptable arguments are `'increasing'` or `'decreasing'`.
+    :param strict: flag to enable/disable strict monotonicity.
+        If set to `True`, will remove duplicates in the index
+        by retaining first occurrence of value in index.
+        If set to `False`, will not test for duplicates in the index;
+        defaults to `False`.
+    :returns: DataFrame that has monotonically increasing
+        (or decreasing) timestamps.
+    """
+    # Check all the inputs are the correct data type
+    check("df", df, [pd.DataFrame])
+    check("direction", direction, [str])
+    check("strict", strict, [bool])
+
+    # Remove duplicates if requested
+    if strict:
+        df = df[~df.index.duplicated(keep="first")]
+
+    # Sort timestamps
+    if direction == "increasing":
+        df = df.sort_index()
+    else:
+        df = df.sort_index(ascending=False)
+
+    # Return the DataFrame
+    return df
+</code></pre>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../math/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Math" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Math
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../utils/" class="md-footer__link md-footer__link--next" aria-label="Next: Utils" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Utils
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.467223ff.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+      
+        <script src="../../js/config.js"></script>
+      
+    
+  </body>
+</html>

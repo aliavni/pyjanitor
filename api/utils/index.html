@@ -1,0 +1,1820 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://pyjanitor-devs.github.io/pyjanitor/api/utils/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>Utils - pyjanitor documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../css/nb_mods.css">
+    
+      <link rel="stylesheet" href="../../css/apidocs.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/nord.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="blue-grey">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#utils" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="pyjanitor documentation" class="md-header__button md-logo" aria-label="pyjanitor documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M448 336V48c0-26.51-21.5-48-48-48H96C42.98 0 0 42.98 0 96v320c0 53.02 42.98 96 96 96h320c17.67 0 32-14.33 32-31.1 0-11.72-6.607-21.52-16-27.1v-81.36c9.8-9.64 16-22.24 16-36.44zM143.1 128h192c9.7 0 16.9 7.2 16.9 16s-7.2 16-16 16H143.1c-7.9 0-15.1-7.2-15.1-16s7.2-16 15.1-16zm0 64h192c9.7 0 16.9 7.2 16.9 16s-7.2 16-16 16H143.1c-7.9 0-15.1-7.2-15.1-16s7.2-16 15.1-16zM384 448H96c-17.67 0-32-14.33-32-32s14.33-32 32-32h288v64z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            pyjanitor documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Utils
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pyjanitor-devs/pyjanitor/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pyjanitor-devs/pyjanitor
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="pyjanitor documentation" class="md-nav__button md-logo" aria-label="pyjanitor documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M448 336V48c0-26.51-21.5-48-48-48H96C42.98 0 0 42.98 0 96v320c0 53.02 42.98 96 96 96h320c17.67 0 32-14.33 32-31.1 0-11.72-6.607-21.52-16-27.1v-81.36c9.8-9.64 16-22.24 16-36.44zM143.1 128h192c9.7 0 16.9 7.2 16.9 16s-7.2 16-16 16H143.1c-7.9 0-15.1-7.2-15.1-16s7.2-16 15.1-16zm0 64h192c9.7 0 16.9 7.2 16.9 16s-7.2 16-16 16H143.1c-7.9 0-15.1-7.2-15.1-16s7.2-16 15.1-16zM384 448H96c-17.67 0-32-14.33-32-32s14.33-32 32-32h288v64z"/></svg>
+
+    </a>
+    pyjanitor documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pyjanitor-devs/pyjanitor/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pyjanitor-devs/pyjanitor
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devguide/" class="md-nav__link">
+        Development Guide
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          API Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          API Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions/" class="md-nav__link">
+        Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../biology/" class="md-nav__link">
+        Biology
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chemistry/" class="md-nav__link">
+        Chemistry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engineering/" class="md-nav__link">
+        Engineering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../finance/" class="md-nav__link">
+        Finance
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io/" class="md-nav__link">
+        Input/Output (io)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ml/" class="md-nav__link">
+        Machine Learning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math/" class="md-nav__link">
+        Math
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../timeseries/" class="md-nav__link">
+        Timeseries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Utils
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Utils
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.utils" class="md-nav__link">
+    janitor.utils
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.utils.check" class="md-nav__link">
+    check()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.utils.check_column" class="md-nav__link">
+    check_column()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.utils.deprecated_alias" class="md-nav__link">
+    deprecated_alias()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.utils.idempotent" class="md-nav__link">
+    idempotent()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.utils.import_message" class="md-nav__link">
+    import_message()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.utils.is_connected" class="md-nav__link">
+    is_connected()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.utils.refactored_function" class="md-nav__link">
+    refactored_function()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.utils.rename_kwargs" class="md-nav__link">
+    rename_kwargs()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.utils.skiperror" class="md-nav__link">
+    skiperror()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.utils.skipna" class="md-nav__link">
+    skipna()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xarray/" class="md-nav__link">
+        XArray
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CHANGELOG/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AUTHORS/" class="md-nav__link">
+        Authors
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.utils" class="md-nav__link">
+    janitor.utils
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.utils.check" class="md-nav__link">
+    check()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.utils.check_column" class="md-nav__link">
+    check_column()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.utils.deprecated_alias" class="md-nav__link">
+    deprecated_alias()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.utils.idempotent" class="md-nav__link">
+    idempotent()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.utils.import_message" class="md-nav__link">
+    import_message()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.utils.is_connected" class="md-nav__link">
+    is_connected()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.utils.refactored_function" class="md-nav__link">
+    refactored_function()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.utils.rename_kwargs" class="md-nav__link">
+    rename_kwargs()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.utils.skiperror" class="md-nav__link">
+    skiperror()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janitor.utils.skipna" class="md-nav__link">
+    skipna()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/pyjanitor-devs/pyjanitor/edit/master/docs/api/utils.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+
+<h1 id="utils">Utils</h1>
+
+
+  <div class="doc doc-object doc-module">
+
+<a id="janitor.utils"></a>
+    <div class="doc doc-contents first">
+
+      <p>Miscellaneous internal PyJanitor helper functions.</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="janitor.utils.check" class="doc doc-heading">
+<code class="highlight language-python">check(varname, value, expected_types)</code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>One-liner syntactic sugar for checking types.
+It can also check callables.</p>
+<p>Example usage:</p>
+<pre><code class="language-python">check('x', x, [int, float])
+</code></pre>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>varname</code></td>
+        <td><code>str</code></td>
+        <td><p>The name of the variable (for diagnostic error message).</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>value</code></td>
+        <td></td>
+        <td><p>The value of the <code>varname</code>.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>expected_types</code></td>
+        <td><code>list</code></td>
+        <td><p>The type(s) the item is expected to be.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>TypeError</code></td>
+        <td><p>if data is not the expected type.</p></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>janitor/utils.py</code></summary>
+          <pre class="highlight"><code class="language-python">def check(varname: str, value, expected_types: list):
+    """
+    One-liner syntactic sugar for checking types.
+    It can also check callables.
+
+    Example usage:
+
+    ```python
+    check('x', x, [int, float])
+    ```
+
+    :param varname: The name of the variable (for diagnostic error message).
+    :param value: The value of the `varname`.
+    :param expected_types: The type(s) the item is expected to be.
+    :raises TypeError: if data is not the expected type.
+    """
+    is_expected_type: bool = False
+    for t in expected_types:
+        if t is callable:
+            is_expected_type = t(value)
+        else:
+            is_expected_type = isinstance(value, t)
+        if is_expected_type:
+            break
+
+    if not is_expected_type:
+        raise TypeError(f"{varname} should be one of {expected_types}.")
+</code></pre>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="janitor.utils.check_column" class="doc doc-heading">
+<code class="highlight language-python">check_column(df, column_names, present=True)</code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>One-liner syntactic sugar for checking the presence or absence
+of columns.</p>
+<p>Example usage:</p>
+<pre><code class="language-python">check(df, ['a', 'b'], present=True)
+</code></pre>
+<p>This will check whether columns <code>'a'</code> and <code>'b'</code> are present in
+<code>df</code>'s columns.</p>
+<p>One can also guarantee that <code>'a'</code> and <code>'b'</code> are not present
+by switching to <code>present=False</code>.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>df</code></td>
+        <td><code>DataFrame</code></td>
+        <td><p>The name of the variable.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>column_names</code></td>
+        <td><code>Union[Iterable, str]</code></td>
+        <td><p>A list of column names we want to check to see if present (or absent) in <code>df</code>.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>present</code></td>
+        <td><code>bool</code></td>
+        <td><p>If <code>True</code> (default), checks to see if all of <code>column_names</code> are in <code>df.columns</code>. If <code>False</code>, checks that none of <code>column_names</code> are in <code>df.columns</code>.</p></td>
+        <td><code>True</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>ValueError</code></td>
+        <td><p>if data is not the expected type.</p></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>janitor/utils.py</code></summary>
+          <pre class="highlight"><code class="language-python">def check_column(
+    df: pd.DataFrame, column_names: Union[Iterable, str], present: bool = True
+):
+    """
+    One-liner syntactic sugar for checking the presence or absence
+    of columns.
+
+    Example usage:
+
+    ```python
+    check(df, ['a', 'b'], present=True)
+    ```
+
+    This will check whether columns `'a'` and `'b'` are present in
+    `df`'s columns.
+
+    One can also guarantee that `'a'` and `'b'` are not present
+    by switching to `present=False`.
+
+    :param df: The name of the variable.
+    :param column_names: A list of column names we want to check to see if
+        present (or absent) in `df`.
+    :param present: If `True` (default), checks to see if all of `column_names`
+        are in `df.columns`. If `False`, checks that none of `column_names` are
+        in `df.columns`.
+    :raises ValueError: if data is not the expected type.
+    """
+    if isinstance(column_names, str) or not isinstance(column_names, Iterable):
+        column_names = [column_names]
+
+    for column_name in column_names:
+        if present and column_name not in df.columns:  # skipcq: PYL-R1720
+            raise ValueError(
+                f"{column_name} not present in dataframe columns!"
+            )
+        elif not present and column_name in df.columns:
+            raise ValueError(
+                f"{column_name} already present in dataframe columns!"
+            )
+</code></pre>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="janitor.utils.deprecated_alias" class="doc doc-heading">
+<code class="highlight language-python">deprecated_alias(**aliases)</code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Used as a decorator when deprecating old function argument names, while
+keeping backwards compatibility. Implementation is inspired from <a href="https://stackoverflow.com/questions/49802412/how-to-implement-deprecation-in-python-with-argument-alias"><code>StackOverflow</code></a>.</p>
+<p>Functional usage example:</p>
+<pre><code class="language-python">@deprecated_alias(a='alpha', b='beta')
+def simple_sum(alpha, beta):
+    return alpha + beta
+</code></pre>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>aliases</code></td>
+        <td></td>
+        <td><p>Dictionary of aliases for a function's arguments.</p></td>
+        <td><code>{}</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Callable</code></td>
+      <td><p>Your original function wrapped with the <code>kwarg</code> redirection function.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>janitor/utils.py</code></summary>
+          <pre class="highlight"><code class="language-python">def deprecated_alias(**aliases) -&gt; Callable:
+    """
+    Used as a decorator when deprecating old function argument names, while
+    keeping backwards compatibility. Implementation is inspired from [`StackOverflow`][stack_link].
+
+    [stack_link]: https://stackoverflow.com/questions/49802412/how-to-implement-deprecation-in-python-with-argument-alias
+
+    Functional usage example:
+
+    ```python
+    @deprecated_alias(a='alpha', b='beta')
+    def simple_sum(alpha, beta):
+        return alpha + beta
+    ```
+
+    :param aliases: Dictionary of aliases for a function's arguments.
+    :return: Your original function wrapped with the `kwarg` redirection
+        function.
+    """  # noqa: E501
+
+    def decorator(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+            rename_kwargs(func.__name__, kwargs, aliases)
+            return func(*args, **kwargs)
+
+        return wrapper
+
+    return decorator
+</code></pre>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="janitor.utils.idempotent" class="doc doc-heading">
+<code class="highlight language-python">idempotent(func, df, *args, **kwargs)</code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Raises an error if a function operating on a DataFrame is not idempotent.
+That is, <code>func(func(df)) = func(df)</code> is not <code>True</code> for all <code>df</code>.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>func</code></td>
+        <td><code>Callable</code></td>
+        <td><p>A Python method.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>df</code></td>
+        <td><code>DataFrame</code></td>
+        <td><p>A pandas <code>DataFrame</code>.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>args</code></td>
+        <td></td>
+        <td><p>Positional arguments supplied to the method.</p></td>
+        <td><code>()</code></td>
+      </tr>
+      <tr>
+        <td><code>kwargs</code></td>
+        <td></td>
+        <td><p>Keyword arguments supplied to the method.</p></td>
+        <td><code>{}</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>ValueError</code></td>
+        <td><p>If <code>func</code> is found to not be idempotent for the given DataFrame (<code>df</code>).</p></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>janitor/utils.py</code></summary>
+          <pre class="highlight"><code class="language-python">def idempotent(func: Callable, df: pd.DataFrame, *args, **kwargs):
+    """
+    Raises an error if a function operating on a DataFrame is not idempotent.
+    That is, `func(func(df)) = func(df)` is not `True` for all `df`.
+
+    :param func: A Python method.
+    :param df: A pandas `DataFrame`.
+    :param args: Positional arguments supplied to the method.
+    :param kwargs: Keyword arguments supplied to the method.
+    :raises ValueError: If `func` is found to not be idempotent for the given
+        DataFrame (`df`).
+    """
+    if not func(df, *args, **kwargs) == func(
+        func(df, *args, **kwargs), *args, **kwargs
+    ):
+        raise ValueError(
+            "Supplied function is not idempotent for the given DataFrame."
+        )
+</code></pre>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="janitor.utils.import_message" class="doc doc-heading">
+<code class="highlight language-python">import_message(submodule, package, conda_channel=None, pip_install=False)</code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Return warning if package is not found.</p>
+<p>Generic message for indicating to the user when a function relies on an
+optional module / package that is not currently installed. Includes
+installation instructions. Used in <code>chemistry.py</code> and <code>biology.py</code>.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>submodule</code></td>
+        <td><code>str</code></td>
+        <td><p><code>pyjanitor</code> submodule that needs an external dependency.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>package</code></td>
+        <td><code>str</code></td>
+        <td><p>External package this submodule relies on.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>conda_channel</code></td>
+        <td><code>str</code></td>
+        <td><p><code>conda</code> channel package can be installed from, if at all.</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>pip_install</code></td>
+        <td><code>bool</code></td>
+        <td><p>Whether package can be installed via <code>pip</code>.</p></td>
+        <td><code>False</code></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>janitor/utils.py</code></summary>
+          <pre class="highlight"><code class="language-python">def import_message(
+    submodule: str,
+    package: str,
+    conda_channel: str = None,
+    pip_install: bool = False,
+):
+    """
+    Return warning if package is not found.
+
+    Generic message for indicating to the user when a function relies on an
+    optional module / package that is not currently installed. Includes
+    installation instructions. Used in `chemistry.py` and `biology.py`.
+
+    :param submodule: `pyjanitor` submodule that needs an external dependency.
+    :param package: External package this submodule relies on.
+    :param conda_channel: `conda` channel package can be installed from,
+        if at all.
+    :param pip_install: Whether package can be installed via `pip`.
+    """
+    is_conda = os.path.exists(os.path.join(sys.prefix, "conda-meta"))
+    installable = True
+    if is_conda:
+        if conda_channel is None:
+            installable = False
+            installation = f"{package} cannot be installed via conda"
+        else:
+            installation = f"conda install -c {conda_channel} {package}"
+    else:
+        if pip_install:
+            installation = f"pip install {package}"
+        else:
+            installable = False
+            installation = f"{package} cannot be installed via pip"
+
+    print(
+        f"To use the janitor submodule {submodule}, you need to install "
+        f"{package}."
+    )
+    print()
+    if installable:
+        print("To do so, use the following command:")
+        print()
+        print(f"    {installation}")
+    else:
+        print(f"{installation}")
+</code></pre>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="janitor.utils.is_connected" class="doc doc-heading">
+<code class="highlight language-python">is_connected(url)</code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>This is a helper function to check if the client
+is connected to the internet.</p>
+<p>Example:
+    print(is_connected("www.google.com"))
+    console &gt;&gt; True</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>url</code></td>
+        <td><code>str</code></td>
+        <td><p>We take a test url to check if we are able to create a valid connection.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>bool</code></td>
+      <td><p>We return a boolean that signifies our connection to the internet</p></td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>OSError</code></td>
+        <td><p>if connection to <code>URL</code> cannot be established</p></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>janitor/utils.py</code></summary>
+          <pre class="highlight"><code class="language-python">def is_connected(url: str) -&gt; bool:
+    """
+    This is a helper function to check if the client
+    is connected to the internet.
+
+    Example:
+        print(is_connected("www.google.com"))
+        console &gt;&gt; True
+
+    :param url: We take a test url to check if we are
+        able to create a valid connection.
+    :raises OSError: if connection to `URL` cannot be
+        established
+    :return: We return a boolean that signifies our
+        connection to the internet
+    """
+    try:
+        sock = socket.create_connection((url, 80))
+        if sock is not None:
+            sock.close()
+            return True
+    except OSError as e:
+
+        warnings.warn(
+            "There was an issue connecting to the internet. "
+            "Please see original error below."
+        )
+        raise e
+    return False
+</code></pre>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="janitor.utils.refactored_function" class="doc doc-heading">
+<code class="highlight language-python">refactored_function(message)</code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Used as a decorator when refactoring functions.</p>
+<p>Implementation is inspired from <a href="https://hackernoon.com/why-refactoring-how-to-restructure-python-package-51b89aa91987"><code>Hacker Noon</code></a>.</p>
+<p>Functional usage example:</p>
+<pre><code class="language-python">@refactored_function(
+    message=&quot;simple_sum() has been refactored. Use hard_sum() instead.&quot;
+)
+def simple_sum(alpha, beta):
+    return alpha + beta
+</code></pre>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>message</code></td>
+        <td><code>str</code></td>
+        <td><p>Message to use in warning user about refactoring.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Callable</code></td>
+      <td><p>Your original function wrapped with the kwarg redirection function.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>janitor/utils.py</code></summary>
+          <pre class="highlight"><code class="language-python">def refactored_function(message: str) -&gt; Callable:
+    """
+    Used as a decorator when refactoring functions.
+
+    Implementation is inspired from [`Hacker Noon`][hacker_link].
+
+    [hacker_link]: https://hackernoon.com/why-refactoring-how-to-restructure-python-package-51b89aa91987
+
+    Functional usage example:
+
+    ```python
+    @refactored_function(
+        message="simple_sum() has been refactored. Use hard_sum() instead."
+    )
+    def simple_sum(alpha, beta):
+        return alpha + beta
+    ```
+
+    :param message: Message to use in warning user about refactoring.
+    :return: Your original function wrapped with the kwarg redirection
+        function.
+    """  # noqa: E501
+
+    def decorator(func):
+        def emit_warning(*args, **kwargs):
+            warnings.warn(message, FutureWarning)
+            return func(*args, **kwargs)
+
+        return emit_warning
+
+    return decorator
+</code></pre>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="janitor.utils.rename_kwargs" class="doc doc-heading">
+<code class="highlight language-python">rename_kwargs(func_name, kwargs, aliases)</code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Used to update deprecated argument names with new names. Throws a
+<code>TypeError</code> if both arguments are provided, and warns if old alias
+is used. Nothing is returned as the passed <code>kwargs</code> are modified
+directly. Implementation is inspired from <a href="https://stackoverflow.com/questions/49802412/how-to-implement-deprecation-in-python-with-argument-alias"><code>StackOverflow</code></a>.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>func_name</code></td>
+        <td><code>str</code></td>
+        <td><p>name of decorated function.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>kwargs</code></td>
+        <td><code>Dict</code></td>
+        <td><p>Arguments supplied to the method.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>aliases</code></td>
+        <td><code>Dict</code></td>
+        <td><p>Dictionary of aliases for a function's arguments.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>TypeError</code></td>
+        <td><p>if both arguments are provided.</p></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>janitor/utils.py</code></summary>
+          <pre class="highlight"><code class="language-python">def rename_kwargs(func_name: str, kwargs: Dict, aliases: Dict):
+    """
+    Used to update deprecated argument names with new names. Throws a
+    `TypeError` if both arguments are provided, and warns if old alias
+    is used. Nothing is returned as the passed `kwargs` are modified
+    directly. Implementation is inspired from [`StackOverflow`][stack_link].
+
+    [stack_link]: https://stackoverflow.com/questions/49802412/how-to-implement-deprecation-in-python-with-argument-alias
+
+    :param func_name: name of decorated function.
+    :param kwargs: Arguments supplied to the method.
+    :param aliases: Dictionary of aliases for a function's arguments.
+    :raises TypeError: if both arguments are provided.
+    """  # noqa: E501
+    for old_alias, new_alias in aliases.items():
+        if old_alias in kwargs:
+            if new_alias in kwargs:
+                raise TypeError(
+                    f"{func_name} received both {old_alias} and {new_alias}"
+                )
+            warnings.warn(
+                f"{old_alias} is deprecated; use {new_alias}",
+                DeprecationWarning,
+            )
+            kwargs[new_alias] = kwargs.pop(old_alias)
+</code></pre>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="janitor.utils.skiperror" class="doc doc-heading">
+<code class="highlight language-python">skiperror(f, return_x=False, return_val=nan)</code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Decorator for escaping any error in a function.</p>
+<p>Example usage:</p>
+<pre><code class="language-python">df[column].apply(
+    skiperror(transform, return_val=3, return_x=False))
+
+# Can also be used as shown below
+@skiperror(return_val=3, return_x=False)
+def transform(x):
+    pass
+</code></pre>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>f</code></td>
+        <td><code>Callable</code></td>
+        <td><p>the function to be wrapped.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>return_x</code></td>
+        <td><code>bool</code></td>
+        <td><p>whether or not the original value that caused error should be returned.</p></td>
+        <td><code>False</code></td>
+      </tr>
+      <tr>
+        <td><code>return_val</code></td>
+        <td></td>
+        <td><p>the value to be returned when an error hits. Ignored if <code>return_x</code> is <code>True</code>.</p></td>
+        <td><code>nan</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Callable</code></td>
+      <td><p>the wrapped function.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>janitor/utils.py</code></summary>
+          <pre class="highlight"><code class="language-python">def skiperror(
+    f: Callable, return_x: bool = False, return_val=np.nan
+) -&gt; Callable:
+    """
+    Decorator for escaping any error in a function.
+
+    Example usage:
+
+    ```python
+    df[column].apply(
+        skiperror(transform, return_val=3, return_x=False))
+
+    # Can also be used as shown below
+    @skiperror(return_val=3, return_x=False)
+    def transform(x):
+        pass
+    ```
+    :param f: the function to be wrapped.
+    :param return_x: whether or not the original value that caused error
+        should be returned.
+    :param return_val: the value to be returned when an error hits.
+        Ignored if `return_x` is `True`.
+    :returns: the wrapped function.
+    """
+
+    def _wrapped(x, *args, **kwargs):
+        try:
+            return f(x, *args, **kwargs)
+        except Exception:  # skipcq: PYL-W0703
+            if return_x:
+                return x
+            return return_val
+
+    return _wrapped
+</code></pre>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="janitor.utils.skipna" class="doc doc-heading">
+<code class="highlight language-python">skipna(f)</code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Decorator for escaping <code>np.nan</code> and <code>None</code> in a function.</p>
+<p>Example usage:</p>
+<pre><code class="language-python">df[column].apply(skipna(transform))
+
+# Can also be used as shown below
+@skipna
+def transform(x):
+    pass
+</code></pre>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>f</code></td>
+        <td><code>Callable</code></td>
+        <td><p>the function to be wrapped.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Callable</code></td>
+      <td><p>the wrapped function.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>janitor/utils.py</code></summary>
+          <pre class="highlight"><code class="language-python">def skipna(f: Callable) -&gt; Callable:
+    """
+    Decorator for escaping `np.nan` and `None` in a function.
+
+    Example usage:
+
+    ```python
+    df[column].apply(skipna(transform))
+
+    # Can also be used as shown below
+    @skipna
+    def transform(x):
+        pass
+    ```
+
+    :param f: the function to be wrapped.
+    :returns: the wrapped function.
+    """
+
+    def _wrapped(x, *args, **kwargs):
+        if (type(x) is float and np.isnan(x)) or x is None:
+            return np.nan
+        return f(x, *args, **kwargs)
+
+    return _wrapped
+</code></pre>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../timeseries/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Timeseries" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Timeseries
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../xarray/" class="md-footer__link md-footer__link--next" aria-label="Next: XArray" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              XArray
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.467223ff.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+      
+        <script src="../../js/config.js"></script>
+      
+    
+  </body>
+</html>
