@@ -691,17 +691,23 @@ def _not_equal_indices(
     else:
         gt_left, gt_right = outcome
 
-    left_c = np.concatenate([lt_left, gt_left, l1_nulls])
-    right_c = np.concatenate([lt_right, gt_right, r1_nulls])
-
+    if keep == _keepTypes.ALL.value:
+        left_c = np.concatenate([lt_left, gt_left, l1_nulls])
+        right_c = np.concatenate([lt_right, gt_right, r1_nulls])
+    else:
+        left_c = np.concatenate([lt_left, gt_left])
+        right_c = np.concatenate([lt_right, gt_right])
+        # summary of logic: if keep = first,
+        # get the first value from less than,
+        # if that is not available , get the first value from greater than
+        # if keep = last,
+        # get the last value from less than,
+        # if that is not available , get the last value from greater than
+        if (np.bincount(left_c) > 1).any():
+            left_c, indexer = np.unique(left_c, return_index=True)
+            right_c = right_c[indexer]
     if (not left_c.size) & (not right_c.size):
         return None
-
-    # keep first and last is controlled by less than before greater than;
-    # if there are duplicates, keep only the first match
-    if (keep != _keepTypes.ALL.value) and (np.bincount(left_c) > 1).any():
-        left_c, indexer = np.unique(left_c, return_index=True)
-        right_c = right_c[indexer]
 
     return left_c, right_c
 
